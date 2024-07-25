@@ -7,6 +7,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SerchBoxComponent } from './components/serchBox/serchBox.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 
 
@@ -17,17 +18,19 @@ import { SerchBoxComponent } from './components/serchBox/serchBox.component';
     SidebarComponent,
     ContactPageComponent,
     SerchBoxComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
   ],
   exports : [
-    HomePageComponent,
     AboutPagesComponent,
-    SidebarComponent,
     ContactPageComponent,
+    HomePageComponent,
+    LoadingSpinnerComponent,
     SerchBoxComponent,
+    SidebarComponent,
   ]
 })
 export class SharedModule { }
