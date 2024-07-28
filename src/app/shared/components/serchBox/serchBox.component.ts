@@ -14,12 +14,20 @@ export class SerchBoxComponent implements OnInit, OnDestroy {
   
   @Input()
   placeholder: string = '';
+
+  @Input()
+  initialValue : string = ''
+
+  @Input()
+  initialValueByCountry : string = ''
   
   @Output()
   onValue = new EventEmitter<string>();
   
   @Output()
   onDebounce = new EventEmitter<string>();
+
+
   
   ngOnInit(): void {
     /* cuando se deja de escribir espera 300 milesimas y se ejecuta onKeyPress automaticamente */
